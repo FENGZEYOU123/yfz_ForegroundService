@@ -22,4 +22,12 @@ public class MainActivity extends AppCompatActivity {
             this.startService(service);
         }
     }
+
+    //点击关闭前端服务
+    public void stopService(View view){
+        Intent service = new Intent(getApplicationContext(), ForegroundServiceTest.class);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            this.stopService(service);
+        }
+    }
 }
