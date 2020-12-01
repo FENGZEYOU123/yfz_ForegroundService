@@ -54,6 +54,7 @@ public class ForegroundServiceTest extends Service {
                     .setContentIntent(pendingIntent)
                     .build();
         }
+
         notification.flags |= Notification.FLAG_NO_CLEAR;
         startForeground(FOREGROUND_ID, notification);
         return Service.START_STICKY;
