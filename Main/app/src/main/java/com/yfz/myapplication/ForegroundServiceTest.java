@@ -65,7 +65,7 @@ public class ForegroundServiceTest extends Service {
         super.onDestroy();
     }
 
-
+    //在onCreate里也运行一次，防止ANR
     private void notification() {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel(
